@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: inherit;
+    background: transparent;
+  }
+
+body, input, textarea {
+    font-family: 'Montserrat', sans-serif;
+    font-size:16px;
+    font-weight: medium;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    min-height: 100vh;
+
+    color:#138073;
+    background-color: #faf05e;
+}
+
+nav {
+    display: inline;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+
+.hamburger-menu {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    
+    width:80px;
+    height:80px;
+    font-size:36px;
+    font-weight: 800;
+
+    margin: 20px 20px 40px 20px;
+    border-radius: 50px;
+    color:#fff;
+    background-color: #000;
+}
+
+@media(max-width:768px) {
+    .hamburger-menu {
+        width: 50px;
+        height:50px;
+        top:10px;
+        right:10px;
+        margin: 10px 10px 20px 10px;
+    }
+}
+
+.bar1, .bar2, .bar3 {
+    width: 40px;
+    height: 5px;
+    background-color: rgb(255, 255, 255);
+    margin: 3px 0;
+    /* transition: 0.4s; */
+}
+
+@media(max-width:768px) {
+    .bar1, .bar2, .bar3 {
+        width: 25px;
+        height:3px;
+    }
+}
+
+
+.form-container {
+    
+
+    margin-top:60px;
+}
+
+
+#form { 
+    width:100%;
+    max-width: 520px;
+
+    margin: 0 auto;
+}
+
+h1 {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 28px;
+    font-weight:800;
+    text-align:center;
+    letter-spacing: -0.03em;;
+    padding-bottom: 0.75em; 
+    margin: 0 30px;  
+}
+
+@media(max-width:520px) {
+    h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+}
+
+input[type="text"] {
+    display:block;
+    width:520px;
+    height:64px;
+
+    padding-left:30px;
+    margin: 0px auto 1.5em auto;
+    border:1px solid #999;
+    border-radius: 10px;
+    color: #467745;
+    background-color: #fff;
+}
+
+@media(max-width:520px) {
+    input[type="text"] {
+        width: calc(100% - 40px);
+        margin: 0px auto 1.5em auto;
+    }
+}
+
+textarea {
+    display:flex;
+    justify-self: center;
+    /* display:block; */
+    /* max-width: 100%; */
+    width:520px;
+    height:150px;
+    resize:none;
+
+    padding:30px;
+    margin: 0px auto 1.5em auto;
+    border:1px solid #999;
+    border-radius: 10px;
+    color: #138073;
+    background-color: #fff;
+}
+
+@media(max-width:520px) {
+    textarea {
+        width: calc(100% - 40px);
+        margin: 0px auto 1.5em auto;
+    }
+}
+
+::placeholder {
+    color: #138073;
+    opacity: 0.6;
+}
+
+.checkbox-container {
+    display:flex;
+    justify-content: right;
+    align-items:center;
+    width:480px;
+
+    margin: 0px auto 2em auto;
+}
+
+@media(max-width:520px) {
+    .checkbox-container {
+        width: calc(100% - 40px);
+        margin: 0px auto 2em auto;
+    }
+}
+
+input[type="checkbox"] {
+    min-width:20px;
+    width:auto;
+    min-height:20px;
+    height:auto;
+    appearance: none;
+    
+    margin-right: 15px;
+    border:1px solid #999;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+@media(max-width:520px) {
+    input[type="checkbox"] {
+        min-width:15px;
+        width:auto;
+        min-height:15px;
+        height:auto;
+    }
+}
+
+.checkbox-container a {
+    text-decoration: underline;
+    color: #468183;
+}
+
+.checkbox-container a:hover {
+    text-decoration: none;
+}
+
+.checkbox-container a:visited {
+    text-decoration: underline;
+    color: #7aaa78;
+}
+
+button.submit {
+    display:block;
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;   
+    width:270px;
+    height:70px;
+    
+    margin:0 auto;
+    border-radius: 10px;
+    border:1px solid #fff;
+    color:#fff;
+    background-color:#39B69F;
+
+    cursor: pointer;
+}
+
+@media(max-width:300px) {
+    button.submit {
+        width: calc(100% - 80px);
+    }
+}
+
+
+/* //TODO: shrink / grow / basis --> checkbox 
+a h1-re kellene tenni egy font-weight 400-at
+a textarea-ra pedig egy resize: none-t, hogy ne jelenjen meg a jobb alsó sarkában az az újraméretezés 3szög */
